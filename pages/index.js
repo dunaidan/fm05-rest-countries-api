@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter, Nunito_Sans } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import { Nunito_Sans } from '@next/font/google'
+import { Box } from '@mui/material';
 
 const nunito = Nunito_Sans({ subsets: ['latin'], weight: ['300', '600', '800'] },);
 
@@ -14,9 +13,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <Box component="main">
         <h1 className={nunito.className}>Countries Nunito</h1>
-      </main>
+      </Box>
     </>
   )
 }
