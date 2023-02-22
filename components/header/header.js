@@ -1,6 +1,11 @@
+import { Box } from "@mui/material";
+import Navbar from "./nav";
+
 function Header() {
   return (
-    <p>Header Here</p>
+    <Box component="header">
+      <Navbar />
+    </Box>
   );
 }
 

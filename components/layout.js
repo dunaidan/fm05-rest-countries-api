@@ -4,7 +4,6 @@ function Layout({ children }) {
   return (
     <>
       <Header />
-      <p>Layout</p> 
       {children}
     </>
   );
