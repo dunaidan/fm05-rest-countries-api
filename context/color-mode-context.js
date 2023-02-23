@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { amber, blueGrey, deepOrange, grey } from '@mui/material/colors';
+import { blueGrey, grey } from '@mui/material/colors';
 
 const ColorModeContext = createContext({
   toggleColorMode: () => {}
@@ -58,6 +58,9 @@ export function ToggleColorModeProvider({ children }) {
               },
             }),
         },
+        typography: {
+          fontFamily: ['Nunito Sans', 'sans-serif'],
+        }
       }),
     [mode],
   );

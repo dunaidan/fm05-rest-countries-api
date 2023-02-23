@@ -18,7 +18,7 @@ function SearchForm() {
             id="outlined-basic" 
             label="Search for a country..." 
             variant="outlined" 
-            size="small" 
+            size="medium" 
             fullWidth
           />
         </Grid>
@@ -31,7 +31,7 @@ function SearchForm() {
               value={region}
               label="Filter by Region"
               onChange={handleSelectChange}
-              size="small"
+              size="medium"
             >
               <MenuItem value={10}>Europe</MenuItem>
               <MenuItem value={20}>Asia</MenuItem>
@@ -40,8 +40,6 @@ function SearchForm() {
           </FormControl>
         </Grid>
       </Grid>
-      
-      
     </Box>
   );
 }
