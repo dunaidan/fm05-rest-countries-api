@@ -34,7 +34,7 @@ export function ToggleColorModeProvider({ children }) {
               },
               divider: grey[200],
               text: {
-                primary: blueGrey[900],
+                primary: blueGrey[800],
                 secondary: blueGrey[800],
                 hint: '#121212'
               },
@@ -54,7 +54,7 @@ export function ToggleColorModeProvider({ children }) {
               },
               text: {
                 primary: '#fff',
-                secondary: grey[500],
+                secondary: grey[300],
               },
             }),
         },

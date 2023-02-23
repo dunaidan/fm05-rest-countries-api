@@ -1,6 +1,15 @@
+const { Box, Container } = require("@mui/material");
+import ButtonBack from "@/components/ui/button-back";
+import CountryDetails from "@/components/countries/county-details";
+
 function Country() {
   return (
-    <h1>Moldova</h1>
+    <Box component="main">
+      <Container maxWidth="xl">
+        <ButtonBack />
+        <CountryDetails />
+      </Container>
+    </Box>    
   )
 }
 
