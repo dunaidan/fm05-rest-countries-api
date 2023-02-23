@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import { Nunito_Sans } from '@next/font/google'
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import SearchForm from '@/components/search/search-form';
-import { Container } from '@mui/system';
+import CountryList from '@/components/countries/country-list';
 
-const nunito = Nunito_Sans({ subsets: ['latin'], weight: ['300', '600', '800'] },);
 
 export default function Home() {
   return (
@@ -16,8 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box component="main">
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <SearchForm />
+          <CountryList />
         </Container>
       </Box>
     </>

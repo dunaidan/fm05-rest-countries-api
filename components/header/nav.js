@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <AppBar position="static" color="secondary">
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Toolbar display="flex">
           <Typography component="h1" sx={{ flexGrow: 1, fontSize: '1.5em' }} className={styles.link}>
               Where in the world?
