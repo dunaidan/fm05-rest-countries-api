@@ -27,17 +27,24 @@ export function ToggleColorModeProvider({ children }) {
           ? {
               // palette values for light mode
               primary: {
+                main: grey[600],
+              },
+              secondary: {
                 main: grey[50],
               },
               divider: grey[200],
               text: {
                 primary: blueGrey[900],
                 secondary: blueGrey[800],
+                hint: '#121212'
               },
             }
           : {
               // palette values for dark mode
               primary: {
+                main: grey[500]
+              },
+              secondary: {
                 main: blueGrey[900]
               },
               divider: blueGrey[700],

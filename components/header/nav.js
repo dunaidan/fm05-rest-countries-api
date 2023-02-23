@@ -12,7 +12,7 @@ function Navbar() {
   const theme = useTheme();
 
   return (
-    <AppBar position="static" >
+    <AppBar position="static" color="secondary">
       <Container maxWidth="lg">
         <Toolbar display="flex">
           <Typography component="h1" sx={{ flexGrow: 1, fontSize: '1.5em' }} className={styles.link}>
