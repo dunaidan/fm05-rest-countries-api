@@ -1,17 +1,10 @@
 import { Grid } from "@mui/material";
 import CountryItem from "./country-item";
 
-function CountryList() {
+function CountryList({ countries }) {
   return (
     <Grid container p={3} spacing={6} justifyContent="center">
-      <CountryItem />
-      <CountryItem />
-      <CountryItem />
-      <CountryItem />
-      <CountryItem />
-      <CountryItem />
-      <CountryItem />
-      <CountryItem />
+      {countries.map(country => <CountryItem key={country.cca3} country={country} />)}
     </Grid>
   );
 }
