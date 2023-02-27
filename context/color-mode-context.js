@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { blueGrey, grey } from '@mui/material/colors';
+import { blueGrey, grey, red } from '@mui/material/colors';
 
 const ColorModeContext = createContext({
   toggleColorMode: () => {}
@@ -37,6 +37,10 @@ export function ToggleColorModeProvider({ children }) {
                 primary: blueGrey[800],
                 secondary: blueGrey[800],
                 hint: '#121212'
+              },
+              background: {
+                default: grey[50],
+                paper: '#fff',
               },
             }
           : {

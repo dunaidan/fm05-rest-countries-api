@@ -1,13 +1,22 @@
+import { AccountCircle } from "@mui/icons-material";
 import { Box, FormControl, Grid, InputAdornment, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 
-function SearchForm() {
+function SearchForm(props) {
   const [region, setRegion] = useState('');
+  const [countryName, setCountryName] = useState('');
 
   const handleSelectChange = (event) => {
-    console.log(event.target.value);
     setRegion(event.target.value);
+    props.searchCountryByRegion(event.target.value);
+  }
+
+  const inputOnChangeHandler = (event) => {
+    const countryName = event.target.value;
+
+    setCountryName(countryName);
+    props.searchCountryByNameHandler(countryName, region);
   }
 
   return (
@@ -16,10 +25,19 @@ function SearchForm() {
         <Grid item xs={12} sm={6} md={4}>
           <TextField 
             id="outlined-basic" 
-            label="Search for a country..." 
+            placeholder="Search for a country..." 
             variant="outlined" 
             size="medium" 
             fullWidth
+            value={countryName}
+            onChange={inputOnChangeHandler}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}  
           />
         </Grid>
         <Grid item xs={12} sm={6} md={2}>
@@ -33,9 +51,12 @@ function SearchForm() {
               onChange={handleSelectChange}
               size="medium"
             >
-              <MenuItem value={10}>Europe</MenuItem>
-              <MenuItem value={20}>Asia</MenuItem>
-              <MenuItem value={30}>Africa</MenuItem>
+              <MenuItem defaultValue value={"All"}>All</MenuItem>
+              <MenuItem value={"Africa"}>Africa</MenuItem>
+              <MenuItem value={"Americas"}>Americas</MenuItem>
+              <MenuItem value={"Asia"}>Asia</MenuItem>
+              <MenuItem value={"Europe"}>Europe</MenuItem>
+              <MenuItem value={"Oceania"}>Oceania</MenuItem>
             </Select>
           </FormControl>
         </Grid>
