@@ -4,6 +4,7 @@ import path from 'path';
 import { Alert, Box, Container } from "@mui/material";
 import ButtonBack from "@/components/ui/button-back";
 import CountryDetails from "@/components/countries/county-details";
+import Head from "next/head";
 
 function Country(props) {
   
