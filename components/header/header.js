@@ -3,7 +3,7 @@ import Navbar from "./nav";
 
 function Header() {
   return (
-    <Box component="header">
+    <Box>
       <Navbar />
     </Box>
   );

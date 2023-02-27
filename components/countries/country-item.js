@@ -9,7 +9,7 @@ function CountryItem({ country }) {
   return (
     <Grid item lg={3} md={4} sm={6} xm={12}>
       <Card>
-        <CardActionArea onClick={()=>{Router.push(country.cca3)}}>
+        <CardActionArea onClick={()=>{Router.push(country.cca3)}} component='div'>
           <CardMedia
             component="img"
             image={country.svgFlag}
