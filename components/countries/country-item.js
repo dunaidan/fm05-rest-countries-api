@@ -7,7 +7,7 @@ function CountryItem({ country }) {
   const imageDescription = `Flag of ${country.officialName}`;
 
   return (
-    <Grid item lg={3} md={4} sm={6} xm={12}>
+    <Grid item lg={3} md={4} sm={6} xs={12}>
       <Card>
         <CardActionArea onClick={()=>{Router.push(country.cca3)}} component='div'>
           <CardMedia
