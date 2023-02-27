@@ -24,10 +24,11 @@ function Navbar() {
               justifyContent: 'center',
             }}
           >
-            <IconButton sx={{ mr: 1 }} onClick={colorModeCtx.toggleColorMode} color="inherit">
+            <IconButton className={styles.iconButton} onClick={colorModeCtx.toggleColorMode} color="inherit" disableRipple>
               {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+              <Typography component='span' ml={2}>{theme.palette.mode} mode</Typography>
             </IconButton>
-            {theme.palette.mode} mode
+            
           </Box>
         </Toolbar>
       </Container>

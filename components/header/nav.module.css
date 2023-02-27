@@ -3,3 +3,12 @@
     font-size: 1em;
   }
 }
+
+.iconButton {
+  margin-right: 1px;
+}
+
+.iconButton :hover {
+  background: none;
+  color: grey;
+}

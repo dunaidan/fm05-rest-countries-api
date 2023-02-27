@@ -59,16 +59,16 @@ function CountryDetails({ country, countryNamePath }) {
   return (
     <Grid container spacing={3} alignItems="flex-start" p={3}>
 
-      <Grid item lg={5} md={6} sm={5} xm={12} className={styles.imageContainer}>
+      <Grid item lg={5} md={6} sm={5} xs={12} className={styles.imageContainer}>
         <Image priority="blur" className={styles.image} fill src={svgFlag} alt={imageDescription}/>
       </Grid>
 
-      <Grid item lg={7} md={6} sm={7} xm={12}>
+      <Grid item lg={7} md={6} sm={7} xs={12}>
         <Grid container spacing={2}>
           <Grid item md={12}>
             <Typography component='h2' fontSize='2rem' fontWeight={700}>{officialName}</Typography>
           </Grid>
-          <Grid item md={6} sm={12} xm={12}>
+          <Grid item md={6} sm={12} xs={12}>
             <Typography variant="body2" color="text.secondary" mt={0.5}>
               <strong>Native Name:</strong> {nativeName}
             </Typography>
@@ -85,7 +85,7 @@ function CountryDetails({ country, countryNamePath }) {
               <strong>Capital:</strong> {capital}
             </Typography>
           </Grid>
-          <Grid item md={6} sm={12} xm={12}>
+          <Grid item md={6} sm={12} xs={12}>
             <Typography variant="body2" color="text.secondary" mt={0.5}>
               <strong>Top Level Domain:</strong> {tld}
             </Typography>
