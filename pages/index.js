@@ -13,7 +13,7 @@ export default function Home(props) {
     const countriesByRegion = searchCountryByRegion(region);
 
     const filteredCountries = countriesByRegion.filter(country => {
-      return country.officialName.startsWith(name);
+      return country.officialName.toUpperCase().startsWith(name.toUpperCase());
     });
     setCountries(filteredCountries);
   }
