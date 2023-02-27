@@ -8,17 +8,22 @@ import CountryDetails from "@/components/countries/county-details";
 function Country(props) {
   
   return (
-    <Box component="main">
-      <Container maxWidth="xl">
-        <ButtonBack />
-        {
-        (props.country != null && props.error === null || props.error === undefined) ?
-          <CountryDetails country={props.country[0]} countryNamePath={props.countryNamePath}/>
-        :
-          <Alert sx={{ margin: '2em' }} severity="error">{props.error}</Alert>  
-        }
-      </Container>
-    </Box>    
+    <>
+      <Head>
+        <title>{props.country[0].name.common}</title>
+      </Head>
+      <Box component="main">
+        <Container maxWidth="xl">
+          <ButtonBack />
+          {
+          (props.country != null && props.error === null || props.error === undefined) ?
+            <CountryDetails country={props.country[0]} countryNamePath={props.countryNamePath}/>
+          :
+            <Alert sx={{ margin: '2em' }} severity="error">{props.error}</Alert>  
+          }
+        </Container>
+      </Box> 
+    </>   
   )
 }
 
